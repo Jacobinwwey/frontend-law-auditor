@@ -1,0 +1,7 @@
+# Local audit outputs
+examples/*.local.json
+examples/*.local.md
+
+# Python cache
+__pycache__/
+*.pyc

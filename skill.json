@@ -1,0 +1,29 @@
+{
+  "name": "frontend-law-auditor",
+  "displayName": "Frontend Law Auditor",
+  "description": "Human-centered frontend quality gate and theory-based audit skill for measurable UX diagnostics and remediation planning.",
+  "version": "0.1.0",
+  "author": "Jacobinwwey",
+  "license": "MIT",
+  "repository": "https://github.com/Jacobinwwey/frontend-law-auditor",
+  "keywords": [
+    "frontend",
+    "ux",
+    "design-law",
+    "audit",
+    "usability",
+    "cognitive-ergonomics",
+    "agent-skill"
+  ],
+  "platforms": [
+    "claude",
+    "codex",
+    "cursor",
+    "windsurf",
+    "opencode",
+    "continue",
+    "qoder",
+    "gemini"
+  ],
+  "install": "npx skills add Jacobinwwey/frontend-law-auditor"
+}
