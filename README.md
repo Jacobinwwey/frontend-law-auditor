@@ -7,6 +7,11 @@
 
 [English](./README.md) | [Chinese](./README.zh-CN.md)
 
+
+Learning Basic Principle :
+<img width="1914" height="13636" alt="image" src="https://github.com/user-attachments/assets/0bd258b7-6da1-4381-9efd-6bddc1b997f7" />
+
+
 ---
 
 `frontend-law-auditor` is a standalone skill repository for auditing frontend UX quality with measurable, theory-grounded checks. It turns human-centered design laws into an executable gate so teams can detect friction early, prioritize fixes, and enforce a release threshold in CI.
