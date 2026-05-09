@@ -142,5 +142,11 @@ frontend-law-auditor/
 
 MIT License，详见 [LICENSE.txt](./LICENSE.txt)。
 
+
+## 基础学术理论总结
+
+<img width="1914" height="9522" alt="image" src="https://github.com/user-attachments/assets/5ca69881-ae5f-4ea2-b659-fc1767ed424a" />
+
+
 ![Star History Chart](https://api.star-history.com/svg?repos=Jacobinwwey/frontend-law-auditor&type=Date)
 #### Friendly Links: [Linux DO：学AI，上L站！](https://linux.do/)
