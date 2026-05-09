@@ -8,7 +8,7 @@
 [English](./README.md) | [Chinese](./README.zh-CN.md)
 
 
-Learning Basic Principle :
+Summerized Learning Basic Principle :
 <img width="1914" height="13636" alt="image" src="https://github.com/user-attachments/assets/0bd258b7-6da1-4381-9efd-6bddc1b997f7" />
 
 
