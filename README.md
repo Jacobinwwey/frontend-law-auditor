@@ -27,10 +27,44 @@
 Check Python:
 
 ```bash
-python --version
+python3 --version
 ```
 
 ## Installation
+
+### Method 1: Skills CLI (Recommended)
+
+```bash
+npx skills add Jacobinwwey/frontend-law-auditor
+```
+
+This is the shortest install path for runtimes that already support `skill.json`.
+
+### Method 2: Codex
+
+This repository now includes both a bootstrap instruction file and a Codex plugin manifest:
+- [`.codex-plugin/plugin.json`](./.codex-plugin/plugin.json)
+- [`skills/frontend-law-auditor/SKILL.md`](./skills/frontend-law-auditor/SKILL.md)
+- [`.codex/INSTALL.md`](./.codex/INSTALL.md)
+
+### Method 3: OpenCode
+
+```bash
+opencode "Fetch and follow instructions from https://raw.githubusercontent.com/Jacobinwwey/frontend-law-auditor/refs/heads/main/.opencode/INSTALL.md"
+```
+
+### Method 4: Claude Code / Claude-Compatible Skill Loaders
+
+This repository now ships with standardized Claude-facing entrypoints:
+- [`.claude/skills/frontend-law-auditor/SKILL.md`](./.claude/skills/frontend-law-auditor/SKILL.md)
+- [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json)
+- [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)
+
+### Method 5: Cursor
+
+Open the repository in Cursor. The included [`.cursorrules`](./.cursorrules) file tells Cursor when to load the skill before auditing.
+
+### Method 6: Manual Clone
 
 ```bash
 git clone https://github.com/Jacobinwwey/frontend-law-auditor.git
@@ -48,18 +82,18 @@ No extra dependency install is required. The audit script uses Python standard l
 
 ```bash
 # 1) Create template
-python scripts/law_audit.py --init-template ./examples/evidence.local.json
+python3 scripts/law_audit.py --init-template ./examples/evidence.local.json
 
 # 2) Fill ./examples/evidence.local.json with measured values
 
 # 3) Run audit report
-python scripts/law_audit.py \
+python3 scripts/law_audit.py \
   --input ./examples/evidence.local.json \
   --output ./examples/audit.local.md \
   --json-out ./examples/audit.local.json
 
 # 4) Strict gate (fails with non-zero exit code when below threshold)
-python scripts/law_audit.py \
+python3 scripts/law_audit.py \
   --input ./examples/evidence.local.json \
   --strict \
   --fail-threshold 85
@@ -74,6 +108,20 @@ Every audit run is expected to provide:
    `Principle -> Observed friction -> Why it happens -> UI change`.
 3. **Priority Fix Plan** grouped by `P0/P1/P2`.
 4. **Recheck Checklist** for the next audit round.
+
+## Standardized Agent Entry Points
+
+To make installation and runtime behavior consistent across agent ecosystems, this repository includes:
+
+- [`.codex/INSTALL.md`](./.codex/INSTALL.md) for Codex bootstrap
+- [`.codex-plugin/plugin.json`](./.codex-plugin/plugin.json) for Codex plugin packaging
+- [`.opencode/INSTALL.md`](./.opencode/INSTALL.md) for OpenCode bootstrap
+- [`.cursorrules`](./.cursorrules) for Cursor auto-loading
+- [`skills/frontend-law-auditor/SKILL.md`](./skills/frontend-law-auditor/SKILL.md) as the packaged Codex skill entrypoint
+- [`.claude/skills/frontend-law-auditor/SKILL.md`](./.claude/skills/frontend-law-auditor/SKILL.md) as the packaged Claude skill entrypoint
+- [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json) and [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) for Claude-compatible marketplace packaging
+
+The repository-root [`SKILL.md`](./SKILL.md) remains the canonical source of truth for workflow and output rules.
 
 ## Evidence Model
 
@@ -121,7 +169,14 @@ If key evidence is missing, affected laws are marked as `unknown`.
 
 ```text
 frontend-law-auditor/
+|-- .claude/skills/frontend-law-auditor/SKILL.md
+|-- .claude-plugin/
+|-- .codex/INSTALL.md
+|-- .codex-plugin/
+|-- .cursorrules
+|-- .opencode/INSTALL.md
 |-- SKILL.md
+|-- skills/frontend-law-auditor/SKILL.md
 |-- scripts/law_audit.py
 |-- examples/evidence.sample.json
 |-- references/
@@ -144,7 +199,7 @@ MIT License. See [LICENSE.txt](./LICENSE.txt).
 
 
 
-## Summerized Learning Basic Principle :
+## Visual Summary
 <img width="1914" height="13636" alt="image" src="https://github.com/user-attachments/assets/0bd258b7-6da1-4381-9efd-6bddc1b997f7" />
 
 

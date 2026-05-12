@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Jacobinwwey",
   "license": "MIT",
+  "homepage": "https://github.com/Jacobinwwey/frontend-law-auditor",
   "repository": "https://github.com/Jacobinwwey/frontend-law-auditor",
   "keywords": [
     "frontend",
@@ -13,17 +14,24 @@
     "audit",
     "usability",
     "cognitive-ergonomics",
-    "agent-skill"
+    "agent-skill",
+    "skills-sh",
+    "ui-review"
   ],
   "platforms": [
     "claude",
     "codex",
     "cursor",
     "windsurf",
+    "copilot",
+    "kiro",
+    "roocode",
+    "kilocode",
     "opencode",
     "continue",
     "qoder",
-    "gemini"
+    "gemini",
+    "trae"
   ],
   "install": "npx skills add Jacobinwwey/frontend-law-auditor"
 }

@@ -27,10 +27,44 @@
 检查 Python：
 
 ```bash
-python --version
+python3 --version
 ```
 
-## 安装
+## 安装方式
+
+### 方法 1：Skills CLI（推荐）
+
+```bash
+npx skills add Jacobinwwey/frontend-law-auditor
+```
+
+这是当前最短的安装路径，适合已经支持 `skill.json` 的智能体运行时。
+
+### 方法 2：Codex
+
+本仓库现在同时提供 Codex 引导文件与插件清单：
+- [`.codex-plugin/plugin.json`](./.codex-plugin/plugin.json)
+- [`skills/frontend-law-auditor/SKILL.md`](./skills/frontend-law-auditor/SKILL.md)
+- [`.codex/INSTALL.md`](./.codex/INSTALL.md)
+
+### 方法 3：OpenCode
+
+```bash
+opencode "Fetch and follow instructions from https://raw.githubusercontent.com/Jacobinwwey/frontend-law-auditor/refs/heads/main/.opencode/INSTALL.md"
+```
+
+### 方法 4：Claude Code / Claude 兼容技能加载器
+
+本仓库现在提供了标准化的 Claude 入口文件：
+- [`.claude/skills/frontend-law-auditor/SKILL.md`](./.claude/skills/frontend-law-auditor/SKILL.md)
+- [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json)
+- [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)
+
+### 方法 5：Cursor
+
+直接在 Cursor 中打开本仓库即可。附带的 [`.cursorrules`](./.cursorrules) 会告诉 Cursor 何时先加载技能再执行审计。
+
+### 方法 6：手动克隆
 
 ```bash
 git clone https://github.com/Jacobinwwey/frontend-law-auditor.git
@@ -48,18 +82,18 @@ cd frontend-law-auditor
 
 ```bash
 # 1) 生成模板
-python scripts/law_audit.py --init-template ./examples/evidence.local.json
+python3 scripts/law_audit.py --init-template ./examples/evidence.local.json
 
 # 2) 在 ./examples/evidence.local.json 中填写测量数据
 
 # 3) 生成审计报告
-python scripts/law_audit.py \
+python3 scripts/law_audit.py \
   --input ./examples/evidence.local.json \
   --output ./examples/audit.local.md \
   --json-out ./examples/audit.local.json
 
 # 4) 严格门禁（不达标将返回非零退出码）
-python scripts/law_audit.py \
+python3 scripts/law_audit.py \
   --input ./examples/evidence.local.json \
   --strict \
   --fail-threshold 85
@@ -74,6 +108,20 @@ python scripts/law_audit.py \
    `Principle -> Observed friction -> Why it happens -> UI change`。
 3. **Priority Fix Plan**：按 `P0/P1/P2` 分组。
 4. **Recheck Checklist**：下一轮复检必须通过的项。
+
+## 标准化智能体入口
+
+为了让安装与运行方式在不同智能体之间更一致，本仓库现在内置：
+
+- [`.codex/INSTALL.md`](./.codex/INSTALL.md) 用于 Codex 初始化
+- [`.codex-plugin/plugin.json`](./.codex-plugin/plugin.json) 用于 Codex 插件打包
+- [`.opencode/INSTALL.md`](./.opencode/INSTALL.md) 用于 OpenCode 初始化
+- [`.cursorrules`](./.cursorrules) 用于 Cursor 自动加载
+- [`skills/frontend-law-auditor/SKILL.md`](./skills/frontend-law-auditor/SKILL.md) 作为 Codex 打包技能入口
+- [`.claude/skills/frontend-law-auditor/SKILL.md`](./.claude/skills/frontend-law-auditor/SKILL.md) 作为 Claude 打包技能入口
+- [`.claude-plugin/plugin.json`](./.claude-plugin/plugin.json) 与 [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) 用于 Claude 兼容市场打包
+
+仓库根目录下的 [`SKILL.md`](./SKILL.md) 仍然是流程与输出约束的唯一事实来源。
 
 ## 证据模型
 
@@ -121,7 +169,14 @@ python scripts/law_audit.py \
 
 ```text
 frontend-law-auditor/
+|-- .claude/skills/frontend-law-auditor/SKILL.md
+|-- .claude-plugin/
+|-- .codex/INSTALL.md
+|-- .codex-plugin/
+|-- .cursorrules
+|-- .opencode/INSTALL.md
 |-- SKILL.md
+|-- skills/frontend-law-auditor/SKILL.md
 |-- scripts/law_audit.py
 |-- examples/evidence.sample.json
 |-- references/
@@ -143,7 +198,7 @@ frontend-law-auditor/
 MIT License，详见 [LICENSE.txt](./LICENSE.txt)。
 
 
-## 基础学术理论总结
+## 可视化理论摘要
 
 <img width="1914" height="9522" alt="image" src="https://github.com/user-attachments/assets/5ca69881-ae5f-4ea2-b659-fc1767ed424a" />
 

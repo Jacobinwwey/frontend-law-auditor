@@ -1,0 +1,43 @@
+{
+  "name": "frontend-law-auditor",
+  "version": "0.1.0",
+  "description": "Human-centered frontend quality gate and theory-based audit skill for measurable UX diagnostics and remediation planning.",
+  "author": {
+    "name": "Jacobinwwey",
+    "url": "https://github.com/Jacobinwwey"
+  },
+  "homepage": "https://github.com/Jacobinwwey/frontend-law-auditor",
+  "repository": "https://github.com/Jacobinwwey/frontend-law-auditor",
+  "license": "MIT",
+  "keywords": [
+    "frontend",
+    "ux",
+    "design-law",
+    "audit",
+    "usability",
+    "agent-skill"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Frontend Law Auditor",
+    "shortDescription": "Measure frontend UX quality against human-centered design laws",
+    "longDescription": "Portable frontend UX auditing skill with fast release gates, theory-grounded scoring, and actionable remediation output for Codex-compatible runtimes.",
+    "developerName": "Jacobinwwey",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Jacobinwwey/frontend-law-auditor",
+    "privacyPolicyURL": "https://github.com/Jacobinwwey/frontend-law-auditor",
+    "termsOfServiceURL": "https://github.com/Jacobinwwey/frontend-law-auditor",
+    "defaultPrompt": [
+      "Audit this frontend flow against Fitts, Hick, Gestalt, Jakob, Miller, and related UX laws.",
+      "Create a measurable release gate for this onboarding or checkout flow."
+    ],
+    "brandColor": "#C2410C",
+    "composerIcon": "./assets/frontend-law-auditor.svg",
+    "logo": "./assets/frontend-law-auditor.svg",
+    "screenshots": []
+  }
+}

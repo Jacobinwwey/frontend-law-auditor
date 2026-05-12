@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Frontend Law Auditor">
+  <rect width="128" height="128" rx="24" fill="#FFF7ED"/>
+  <path d="M28 38h72v52H28z" fill="#FDBA74"/>
+  <path d="M36 46h56v36H36z" fill="#7C2D12"/>
+  <path d="M44 56h28" stroke="#FFEDD5" stroke-width="8" stroke-linecap="round"/>
+  <path d="M44 70h16" stroke="#FFEDD5" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="82" cy="68" r="12" fill="#FED7AA"/>
+  <path d="m90 76 10 10" stroke="#EA580C" stroke-width="8" stroke-linecap="round"/>
+</svg>
